@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test('Alerts', async ({ page }) => {
+test('Alertss', async ({ page }) => {
     await page.goto('https://testautomationpractice.blogspot.com/')
 
     // Enable dialog window handler
