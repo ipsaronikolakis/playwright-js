@@ -36,6 +36,7 @@ test('Paying for a course with Stripe and receiving invoice', async ({ page }) =
     const catalogCourseCardsSelector = '[data-testid="catalog-course-card"]'
     const catalogCourseCards = page.locator(catalogCourseCardsSelector)
     await page.waitForSelector(catalogCourseCardsSelector)
+    await page.waitForLoadState('load')
     expect(catalogCourseCards).toBeVisible()
     expect(await catalogCourseCards.count()).toBe(1)
 
